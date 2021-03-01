@@ -3,3 +3,8 @@ RewriteCond %{HTTPS} off
 RewriteRule .* https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
 RewriteRule (\W|^)collettivo-ocra(\W|$) associazioni/collettivo-ocra.html [L]
+RewriteRule (\W|^)collettivo-ocra(\W|$) associazioni/kanimannira.html [L]
+RewriteRule (\W|^)collettivo-ocra(\W|$) insieme-in-città.html [L]
+RewriteRule (\W|^)collettivo-ocra(\W|$) legambiente.html [L]
+RewriteRule (\W|^)collettivo-ocra(\W|$) ragusattiva.html [L]
+RewriteRule (\W|^)collettivo-ocra(\W|$) rinascita-verde.html [L]
