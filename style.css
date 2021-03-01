@@ -3271,7 +3271,7 @@ html[xmlns] .slider-wrap {
 	/* Primary Menu - Style 5
 	-----------------------------------------------------------------*/
 
-	.sticky-header-shrink .style-5 .menu-container > .menu-item { margin-left: 2px; }
+	.assets .style-5 .menu-container > .menu-item { margin-left: 2px; }
 
 	.sticky-header-shrink .style-5 .menu-container > .menu-item:first-child { margin-left: 0; }
 
