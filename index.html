@@ -610,7 +610,8 @@
 								<ul class="list-unstyled iconlist ml-0">
 									<li class="mb-2"><a href="/" class="text-white-50">Home</a></li>
 									<li class="mb-2"><a href="#associazioni" class="text-white-50">Associazioni</a></li>
-									<li class="mb-2"><a href="#puntivendita" class="text-white-50">Punti Vendita</a></li>
+									<li class="mb-2"><a href="#puntivendita" class="text-white-50">Punti Vendita</a>
+									</li>
 									<li class="mb-2"><a href="/eventi" class="text-white-50">Eventi</a></li>
 								</ul>
 							</div>
@@ -635,7 +636,8 @@
 				<div class="container">
 					<div class="row">
 						<div class="col-12">
-							<p class="mb-2 text-white-50">Carato | Developed with ❤️ by  <a href="https://turinglabs.org/" target="_blank">Turinglabs</a></p>
+							<p class="mb-2 text-white-50">Carato | Developed with ❤️ by <a
+									href="https://turinglabs.org/" target="_blank">Turinglabs</a></p>
 						</div>
 					</div>
 				</div>
@@ -811,13 +813,15 @@
 			#copyrights {
 				padding: 10px 0 !important;
 			}
+
 			#map {
-				margin-top:80px;
+				margin-top: 80px;
 			}
 		}
 	</style>
 	<script>
-		mapboxgl.accessToken = 'pk.eyJ1IjoidHVyaW5nbGFic29yZyIsImEiOiJja2xzOHk1NTYxa2d2MnZxbWh0NHQ4cjdiIn0.TrqbL18iVT4_wTpfgg_hRg';
+		mapboxgl.accessToken =
+			'pk.eyJ1IjoidHVyaW5nbGFic29yZyIsImEiOiJja2xzOHk1NTYxa2d2MnZxbWh0NHQ4cjdiIn0.TrqbL18iVT4_wTpfgg_hRg';
 		var map = new mapboxgl.Map({
 			container: 'map',
 			style: 'mapbox://styles/mapbox/streets-v11',
@@ -829,14 +833,53 @@
 		/*
 			PRIMA CLASSE
 		*/
-		popup['primaclasse'] = new mapboxgl.Popup({ offset: 25 }).setText(
-		"Prima Classe\nVia Ercolano, 7\nRagusa"
+		popup['primaclasse'] = new mapboxgl.Popup({
+			offset: 25
+		}).setText(
+			"Prima Classe | Via Ercolano, 7 Ragusa"
 		);
 		new mapboxgl.Marker()
-		.setLngLat([14.724257, 36.918427])
-		.setPopup(popup['primaclasse'])
-		.addTo(map);
-		
+			.setLngLat([14.724257, 36.918427])
+			.setPopup(popup['primaclasse'])
+			.addTo(map);
+
+		/*
+			PROXIMA
+		*/
+		popup['proxima'] = new mapboxgl.Popup({
+			offset: 25
+		}).setText(
+			"Proxima - Orti Sociali | Via Deledda, Ragusa"
+		);
+		new mapboxgl.Marker()
+			.setLngLat([14.693839, 36.930921])
+			.setPopup(popup['proxima'])
+			.addTo(map);
+
+		/*
+			UBIK IBLA
+		*/
+		popup['proxima'] = new mapboxgl.Popup({
+			offset: 25
+		}).setText(
+			"Ubik | Corso XXV Aprile, 17/19, 97100 Ragusa"
+		);
+		new mapboxgl.Marker()
+			.setLngLat([14.744861990170651, 36.92603390440305])
+			.setPopup(popup['ubik'])
+			.addTo(map);
+		/*
+			MERCATOPOLI
+		*/
+		popup['proxima'] = new mapboxgl.Popup({
+			offset: 25
+		}).setText(
+			"Mercatopoli | Via Mongibello, 81, 97100 Ragusa"
+		);
+		new mapboxgl.Marker()
+			.setLngLat([14.71678407659341, 36.92061295364563])
+			.setPopup(popup['mercatopoli'])
+			.addTo(map);
 	</script>
 </body>
 
