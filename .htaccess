@@ -9,5 +9,6 @@ RewriteRule (\W|^)insieme-in-citta(\W|$) associazioni/insieme-in-citta.html [L]
 RewriteRule (\W|^)legambiente(\W|$) associazioni/legambiente.html [L]
 RewriteRule (\W|^)ragusattiva(\W|$) associazioni/ragusattiva.html [L]
 RewriteRule (\W|^)rinascita-verde(\W|$) associazioni/rinascita-verde.html [L]
+RewriteRule (\W|^)rimboschiamo(\W|$) associazioni/rimboschiamo.html [L]
 
 RewriteRule (\W|^)proxima(\W|$) esercenti/proxima.html [L]
