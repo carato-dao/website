@@ -1,16 +1,123 @@
-RewriteEngine On
-RewriteCond %{HTTPS} off
-RewriteRule .* https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
-RewriteRule (\W|^)eventi(\W|$) eventi.html [L]
-RewriteRule (\W|^)collettivo-ocra(\W|$) associazioni/collettivo-ocra.html [L]
-RewriteRule (\W|^)kanimannira(\W|$) associazioni/kanimannira.html [L]
-RewriteRule (\W|^)insieme-in-citta(\W|$) associazioni/insieme-in-citta.html [L]
-RewriteRule (\W|^)legambiente(\W|$) associazioni/legambiente.html [L]
-RewriteRule (\W|^)ragusattiva(\W|$) associazioni/ragusattiva.html [L]
-RewriteRule (\W|^)rinascita-verde(\W|$) associazioni/rinascita-verde.html [L]
-RewriteRule (\W|^)rimboschiamo(\W|$) associazioni/rimboschiamo.html [L]
-RewriteRule (\W|^)ragusa-abbogghia(\W|$) associazioni/ragusa-abbogghia.html [L]
+ 		 RewriteEngine On
+ 		 Options -Multiviews
+ 		 Options -Indexes
+ 		 <IfModule mod_security.c>
+ 		 	SecFilterEngine Off
+ 		 	SecFilterScanPOST Off
+		 </IfModule>
+		 # RewriteCond %{HTTPS} !=on
+    	 # RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R,QSA]
 
+		#CUSTOM-DATATYPES#
+     
+		#ASSOCIAZIONI#
+		RewriteRule bmt/datatype-associazioni/new bmt/customdata.php?datatype=associazioni&action=new [L] 
+		RewriteRule bmt/datatype-associazioni/([^/]+)/mod bmt/customdata.php?datatype=associazioni&action=mod&id=$1 [L] 
+		RewriteRule bmt/datatype-associazioni/([^/]+)/del bmt/customdata.php?datatype=associazioni&delete=yes&id=$1 [L] 
+		RewriteRule (\W|^)bmt/datatype-associazioni(\W|$) bmt/customdata.php?datatype=associazioni [L]
+     
+		#ESERCENTI#
+		RewriteRule bmt/datatype-esercenti/new bmt/customdata.php?datatype=esercenti&action=new [L] 
+		RewriteRule bmt/datatype-esercenti/([^/]+)/mod bmt/customdata.php?datatype=esercenti&action=mod&id=$1 [L] 
+		RewriteRule bmt/datatype-esercenti/([^/]+)/del bmt/customdata.php?datatype=esercenti&delete=yes&id=$1 [L] 
+		RewriteRule (\W|^)bmt/datatype-esercenti(\W|$) bmt/customdata.php?datatype=esercenti [L]										
+		
+	    #DATABASE#	
+	    RewriteRule bmt/manage-database/([^/]+)/restore bmt/database.php?action=backups&restore=$1 [L]
+		RewriteRule bmt/manage-database/backups bmt/database.php?action=backups [L]
+		RewriteRule (\W|^)bmt/manage-database(\W|$) bmt/database.php [L]  
+			
+	   	#CONFIGS#
+		RewriteRule bmt/configs/new bmt/configs.php?action=new [L] 
+		RewriteRule bmt/configs/([^/]+)/del bmt/configs.php?delete=yes&id=$1 [L]
+		RewriteRule bmt/configs/([^/]+)/mod bmt/configs.php?action=mod&id=$1 [L] 
+		RewriteRule (\W|^)bmt/configs(\W|$) bmt/configs.php [L] 
+		
+		#CRYPTED CONFIGS#
+		RewriteRule bmt/crypted-configs/new bmt/crypted_configs.php?action=new [L] 
+		RewriteRule bmt/crypted-configs/([^/]+)/del bmt/crypted_configs.php?delete=yes&id=$1 [L]
+		RewriteRule bmt/crypted-configs/([^/]+)/mod bmt/crypted_configs.php?action=mod&id=$1 [L] 
+		RewriteRule (\W|^)bmt/crypted-configs(\W|$) bmt/crypted_configs.php [L] 
+								
+		#TRANSLATIONS#
+		RewriteRule bmt/translations/new bmt/translations.php?action=new [L] 
+		RewriteRule bmt/translations/([^/]+)/del bmt/translations.php?delete=yes&id=$1 [L] 
+		RewriteRule bmt/translations/([^/]+)/mod bmt/translations.php?action=mod&id=$1 [L] 
+		RewriteRule (\W|^)bmt/translations(\W|$) bmt/translations.php [L] 
+		
+		#LANGUAGES#
+		RewriteRule bmt/languages/new bmt/languages.php?action=new [L] 
+		RewriteRule bmt/languages/([^/]+)/del bmt/languages.php?delete=yes&id=$1 [L] 
+		RewriteRule bmt/languages/([^/]+)/mod bmt/languages.php?action=mod&id=$1 [L] 
+		RewriteRule (\W|^)bmt/languages(\W|$) bmt/languages.php [L] 
+		
+		#NEWSLETTER#
+		RewriteRule bmt/manage-newsletter/send-newsletter/([^/]+) bmt/newsletter.php?action=send_n&id=$1 [L]
+		RewriteRule bmt/manage-newsletter/tracking/([^/]+) bmt/newsletter.php?action=tracking&id=$1 [L]
+		RewriteRule bmt/manage-newsletter/([^/]+)/mod bmt/newsletter.php?action=mod_n&id=$1 [L]
+		RewriteRule bmt/manage-newsletter/utenti/([^/]+) bmt/newsletter.php?action=mod_u&id=$1 [L]
+		RewriteRule bmt/manage-newsletter/inserisci-utente bmt/newsletter.php?action=ins_u [L]
+		RewriteRule bmt/manage-newsletter/utenti bmt/newsletter.php?action=vis_u [L]
+		RewriteRule bmt/manage-newsletter/new bmt/newsletter.php?action=ins_n [L]
+		RewriteRule (\W|^)bmt/manage-newsletter(\W|$) bmt/newsletter.php [L] 
+					
+		#ADMINS#
+		RewriteRule bmt/admins/new bmt/admins.php?action=new [L] 
+		RewriteRule bmt/admins/([^/]+)/del bmt/admins.php?delete=yes&id=$1 [L]
+		RewriteRule bmt/admins/([^/]+)/mod bmt/admins.php?action=mod&id=$1 [L] 
+		RewriteRule (\W|^)bmt/admins(\W|$) bmt/admins.php [L] 
+		
+		#HTACCESS#
+		RewriteRule bmt/manage-htaccess/new bmt/htaccess.php?action=new [L] 
+		RewriteRule bmt/manage-htaccess/([^/]+)/del bmt/htaccess.php?delete=yes&id=$1 [L]
+		RewriteRule bmt/manage-htaccess/([^/]+)/mod bmt/htaccess.php?action=mod&id=$1 [L] 
+		RewriteRule (\W|^)bmt/manage-htaccess(\W|$) bmt/htaccess.php [L] 
+		
+		#MENU#
+		RewriteRule bmt/menu/new bmt/menu.php?action=new [L] 
+		RewriteRule bmt/menu/([^/]+)/del bmt/menu.php?delete=yes&id=$1 [L]
+		RewriteRule bmt/menu/([^/]+)/mod bmt/menu.php?action=mod&id=$1 [L] 
+		RewriteRule (\W|^)bmt/menu(\W|$) bmt/menu.php [L] 
+		
+		#INFO#
+		RewriteRule (\W|^)bmt/info(\W|$) bmt/info.php [L] 
+			
+		#FILEMANAGER#
+		RewriteRule (\W|^)bmt/file-manager(\W|$) bmt/filemanager.php [L] 
 
-RewriteRule (\W|^)proxima(\W|$) esercenti/proxima.html [L]
+		#PAGES#
+		RewriteRule (\W|^)bmt/reload-engine(\W|$) bmt/engine.php [L] 
+		RewriteRule bmt/pages/new/layout/([^/]+) bmt/pages.php?action=new&layout=$1 [L] 
+		RewriteRule bmt/pages/([^/]+)/mod/layout/([^/]+) bmt/pages.php?action=mod&id=$1&layout=$2 [L] 
+		RewriteRule bmt/pages/([^/]+)/del bmt/pages.php?delete=yes&id=$1 [L] 
+		RewriteRule bmt/pages/([^/]+)/mod bmt/pages.php?action=mod&id=$1 [L]
+		RewriteRule bmt/pages/new bmt/pages.php?action=new [L] 
+		RewriteRule (\W|^)bmt/pages(\W|$) bmt/pages.php [L] 
+		
+		RewriteRule bmt/manage-datatypes/([^/]+)/remove bmt/datatypes.php?remove=$1 [L] 
+		RewriteRule bmt/manage-datatypes/([^/]+)/restore bmt/datatypes.php?restore=$1 [L] 
+		RewriteRule bmt/manage-datatypes/([^/]+)/del bmt/datatypes.php?delete=yes&type=$1 [L] 
+		RewriteRule bmt/manage-datatypes/([^/]+)/mod bmt/datatypes.php?action=mod&type=$1 [L] 
+		RewriteRule bmt/manage-datatypes/new bmt/datatypes.php?action=new [L]
+		RewriteRule bmt/manage-datatypes/backups bmt/datatypes.php?action=backups [L]
+		RewriteRule (\W|^)bmt/manage-datatypes(\W|$) bmt/datatypes.php [L]
+		        
+        RewriteRule (\W|^)bmt/login/errore(\W|$) bmt/login.php?error=true [L] 
+		RewriteRule (\W|^)bmt/login(\W|$) bmt/login.php [L] 
+		RewriteRule (\W|^)bmt/logout(\W|$)  bmt/index.php?doLogout=true [L] 
+		
+		#CUSTOM HTACCESS#
+		
+			  RewriteRule esercente/([^/]+) index.php?page=esercente&slug=$1 [L]
+RewriteRule associazione/([^/]+) index.php?page=associazione&slug=$1 [L]
+		#WEBSITE#
+		
+			  	RewriteRule it/associazione index.php?page=associazione&ln=it [L] 
+			  	RewriteRule (\W|^)associazione(\W|$) index.php?page=associazione [L]
+			  	RewriteRule it/esercente index.php?page=esercente&ln=it [L] 
+			  	RewriteRule (\W|^)esercente(\W|$) index.php?page=esercente [L]
+			  	RewriteRule it/eventi index.php?page=eventi&ln=it [L] 
+			  	RewriteRule (\W|^)eventi(\W|$) index.php?page=eventi [L]
+			  	RewriteRule it/homepage index.php?page=homepage&ln=it [L] 
+			  	RewriteRule (\W|^)homepage(\W|$) index.php?page=homepage [L]
