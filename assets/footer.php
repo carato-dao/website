@@ -242,161 +242,18 @@
         zoom: 13
     });
     var popup = {}
-
-    /*
-    	PRIMA CLASSE
-    */
-    popup['primaclasse'] = new mapboxgl.Popup({
-        offset: 25
-    }).setText(
-        "Prima Classe | Via Ercolano, 7 Ragusa"
-    );
-    new mapboxgl.Marker()
-        .setLngLat([14.724257, 36.918427])
-        .setPopup(popup['primaclasse'])
-        .addTo(map);
-
-    /*
-    	PROXIMA
-    */
-    popup['proxima'] = new mapboxgl.Popup({
-        offset: 25
-    }).setText(
-        "Proxima - Orti Sociali | Via Deledda, Ragusa"
-    );
-    new mapboxgl.Marker()
-        .setLngLat([14.693839, 36.930921])
-        .setPopup(popup['proxima'])
-        .addTo(map);
-
-    /*
-    	UBIK IBLA
-    */
-    popup['ubik'] = new mapboxgl.Popup({
-        offset: 25
-    }).setText(
-        "Ubik | Corso XXV Aprile, 17/19, 97100 Ragusa"
-    );
-    new mapboxgl.Marker()
-        .setLngLat([14.744861990170651, 36.92603390440305])
-        .setPopup(popup['ubik'])
-        .addTo(map);
-    /*
-    	MERCATOPOLI
-    */
-    popup['mercatopoli'] = new mapboxgl.Popup({
-        offset: 25
-    }).setText(
-        "Mercatopoli | Via Mongibello, 81, 97100 Ragusa"
-    );
-    new mapboxgl.Marker()
-        .setLngLat([14.71678407659341, 36.92061295364563])
-        .setPopup(popup['mercatopoli'])
-        .addTo(map);
-
-    /*
-    	DELICATESSEN
-    */
-    popup['delicatessen'] = new mapboxgl.Popup({
-        offset: 25
-    }).setText(
-        "Delicatessen | Via Archimede, 32, 97100 Ragusa"
-    );
-    new mapboxgl.Marker()
-        .setLngLat([14.719771, 36.9242117])
-        .setPopup(popup['delicatessen'])
-        .addTo(map);
-
-    /*
-    	FORMICHE
-    */
-    popup['formiche'] = new mapboxgl.Popup({
-        offset: 25
-    }).setText(
-        "Formiche | Via F.Ozanam, 2 A, 97100 Ragusa"
-    );
-    new mapboxgl.Marker()
-        .setLngLat([14.724419388356962, 36.918071028468255])
-        .setPopup(popup['formiche'])
-        .addTo(map);
-
-    /*
-    	CUMANNANTI
-    */
-    popup['cumannanti'] = new mapboxgl.Popup({
-        offset: 25
-    }).setText(
-        "Trattoria nto Cumannanti| Via Archimede, 147, 97100 Ragusa"
-    );
-    new mapboxgl.Marker()
-        .setLngLat([14.720088683770252, 36.92421379669825])
-        .setPopup(popup['cumannanti'])
-        .addTo(map);
-
-    /*
-    	Hiblasus
-    */
-    popup['hyblasus'] = new mapboxgl.Popup({
-        offset: 25
-    }).setText(
-        "Hyblasus | Via Lazio, 64, 97100 Ragusa"
-    );
-    new mapboxgl.Marker()
-        .setLngLat([14.714967370880176, 36.92558951626652])
-        .setPopup(popup['hyblasus'])
-        .addTo(map);
-
-    /*
-    	Verde Vigna
-    */
-    popup['verdevigna'] = new mapboxgl.Popup({
-        offset: 25
-    }).setText(
-        "Verde Vigna | Via Pietro Nenni, 9, 97100 Ragusa"
-    );
-    new mapboxgl.Marker()
-        .setLngLat([14.714867553687087, 36.90907303210907, ])
-        .setPopup(popup['verdevigna'])
-        .addTo(map);
-
-    /*
-    	Sottosale
-    */
-    popup['sottosale'] = new mapboxgl.Popup({
-        offset: 25
-    }).setText(
-        "SottoSale | Via Venezia, 18, 97100 Marina di Ragusa"
-    );
-    new mapboxgl.Marker()
-        .setLngLat([14.553604955533578, 36.78368604951849])
-        .setPopup(popup['sottosale'])
-        .addTo(map);
-
-    /*
-    	exebistrot
-    */
-    popup['exebistrot'] = new mapboxgl.Popup({
-        offset: 25
-    }).setText(
-        "Exè Bistrot | Calle Bartolotti, sn, 97100 Ragusa"
-    );
-    new mapboxgl.Marker()
-        .setLngLat([14.736526597866051, 36.92606903133515, ])
-        .setPopup(popup['sottosale'])
-        .addTo(map);
-
-    /*
-			parafarmacia ibla
-		*/
-    popup['pharma'] = new mapboxgl.Popup({
-        offset: 25
-    }).setText(
-        "Parafarmacia Ibla | Via Camerina, 47-39, 97100 Ragusa RG"
-    );
-    new mapboxgl.Marker()
-        .setLngLat([14.743691172499283, 36.927120347532295, ])
-        .setPopup(popup['pharma'])
-        .addTo(map);
+    <?php $esercenti = returnDBObject("SELECT * FROM datatype_esercenti WHERE attivO=? ORDER BY nome ASC", ["SI"], 1); ?>
+    <?php foreach ($esercenti as $esercente) { ?>
+        popup['<?php echo toSlug($esercente['nome']); ?>'] = new mapboxgl.Popup({
+            offset: 25
+        }).setText(
+            "<?php echo $esercente['nome'] . " - " . $esercente['indirizzo']; ?>"
+        );
+        new mapboxgl.Marker()
+            .setLngLat([<?php echo $esercente['coordinate']; ?>])
+            .setPopup(popup['primaclasse'])
+            .addTo(map);
+    <?php } ?>
 </script>
 </body>
 

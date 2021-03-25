@@ -7,3 +7,5 @@ bmt/inc/db_backup/*
 .htaccess
 bmt/inc/connect.php
 _static
+bmt/scripts/datatypes/bak/*
+!bmt/scripts/datatypes/bak/.BACKUPS_WILL_GO_HERE

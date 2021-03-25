@@ -617,6 +617,15 @@ function toAscii($str)
 
 	return $clean;
 }
+function toSlug($str)
+{
+	$str = str_replace('.', '-', $str);
+	$clean = preg_replace("/[^a-zA-Z0-9\/_|+ -]/", '', trim($str));
+	$clean = strtolower(trim($clean, '-'));
+	$clean = preg_replace("/[\/_|+ -]+/", '-', $clean);
+
+	return $clean;
+}
 function deAscii($str)
 {
 	$clean = str_replace('-', ' ', $str);

@@ -113,144 +113,23 @@
     <div id="associazioni" class="section section-yogas mb-0" style="background-color: rgba(126, 150, 128,0.2); padding: 100px 0">
       <div class="container">
         <div class="row">
-          <div class="col-md-4 col-lg-4">
-            <div class="card" style="border-top-color: #FBBD40;">
-              <div class="card-body">
-                <img src="assets/images/logo1.png" alt="Collettivo Ocra" class="mb-3" width="70">
-                <div class="d-flex align-items-baseline">
-                  <h3>Collettivo Ocra</h3>
-                  <a href="/collettivo-ocra">
-                    <i class="icon-line-open ml-2"></i>
-                  </a>
+          <?php $associazioni = returnDBObject("SELECT * FROM datatype_associazioni WHERE attiva=? ORDER BY nome ASC", ["SI"], 1); ?>
+          <?php foreach ($associazioni as $associazione) { ?>
+            <div class="col-md-4 col-lg-4">
+              <div class="card" style="border-top-color: #FBBD40;">
+                <div class="card-body">
+                  <img src="/contents/<?php echo $associazione['logo']; ?>" alt="<?php echo $associazione['nome']; ?>" class="mb-3" width="70">
+                  <div class="d-flex align-items-baseline">
+                    <h3><?php echo $associazione['nome']; ?></h3>
+                    <a href="/associazione/<?php echo $associazione['slug']; ?>">
+                      <i class="icon-line-open ml-2"></i>
+                    </a>
+                  </div>
+                  <p class="text-black-50"><?php echo $associazione['preview']; ?></p>
                 </div>
-                <p class="text-black-50">Associazione culturale impegnata nella promozione di
-                  iniziative didattico-artistiche e riqualificazione artistica del contesto
-                  urbano.
-                </p>
               </div>
             </div>
-          </div>
-          <div class="col-md-4 col-lg-4">
-            <div class="card topmargin" style="border-top-color: #F9C900;">
-              <div class="card-body">
-                <img src="assets/images/logo2.png" alt="Kanimannira" width="70">
-                <div class="d-flex align-items-baseline">
-                  <h3>Kanimannira</h3>
-                  <a href="/kanimannira">
-                    <i class="icon-line-open ml-2"></i>
-                  </a>
-                </div>
-                <p class="text-black-50">Associazione naturalistica promotrice di attività
-                  escursionistiche e progetti di tutela ambientale e socialità del bosco.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 col-lg-4" style="margin-top: 40px">
-            <div class="card topmargin" style="border-top-color: #D7CECC;">
-              <div class="card-body">
-                <img src="assets/images/logo3.svg" alt="Insieme in Città" width="70">
-                <div class="d-flex align-items-baseline">
-                  <h3>Insieme in Città</h3>
-                  <!-- link <a href="/insieme-in-città">
-												<i class="icon-line-open ml-2"></i>
-											</a> -->
-                </div>
-                <p class="text-black-50">Opera per la valorizzazione del centro storico di
-                  Ragusa Superiore e la creazione di una mappa di comunità fatta di saperi
-                  condivisi ed esperienze collettive.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 col-lg-4">
-            <div class="card" style="border-top-color: #00965D;">
-              <div class="card-body">
-                <img src="assets/images/logo5.svg" alt="Legambiente" width="70">
-                <div class="d-flex align-items-baseline">
-                  <h3>Legambiente</h3>
-                  <a href="/legambiente">
-                    <i class="icon-line-open ml-2"></i>
-                  </a>
-                </div>
-                <p class="text-black-50">Ispirata ai grandi valori di tutela dell’ambiente e del
-                  territorio, è oggi l’associazione ambientalista più diffusa sul nostro
-                  territorio.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 col-lg-4">
-            <div class="card topmargin" style="border-top-color: #2B9348;">
-              <div class="card-body">
-                <img src="assets/images/rg-logo.svg" alt="Ragusattiva" class="mb-3" width="70">
-                <div class="d-flex align-items-baseline">
-                  <h3>Ragusattiva</h3>
-                  <a href="/ragusattiva">
-                    <i class="icon-line-open ml-2"></i>
-                  </a>
-                </div>
-                <p class="text-black-50">Un'organizzazione non profit che s'impegna ad
-                  effettuare interventi di pulizia e piantumazione per la riqualificazione
-                  ambientale del territorio.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 col-lg-4" style="margin-top: 40px;">
-            <div class="card topmargin" style="border-top-color: #B76720;">
-              <div class="card-body">
-                <img src="assets/images/rv-logo.svg" alt="Rinascita Verde" class="mb-3" width="70">
-                <div class="d-flex align-items-baseline">
-                  <h3>Rinascita Verde</h3>
-                  <a href="/rinascita-verde">
-                    <i class="icon-line-open ml-2"></i>
-                  </a>
-                </div>
-                <p class="text-black-50">Un collettivo giovanile che si occupa di pulizie ed
-                  escrusioni nelle aree verdi di tutta la Sicilia.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 col-l-4">
-            <div class="card" style="border-top-color: #66B474;">
-              <div class="card-body">
-                <img src="assets/images/logo8.svg" alt="Puliamo Chiaramonte" class="mb-3" width="70">
-                <div class="d-flex align-items-baseline">
-                  <h3>Puliamo Chiaramonte</h3>
-                </div>
-                <p class="text-black-50">Amore per l’ambiente, volontariato e senso civico al
-                  servizio della collettività..</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 col-lg-4">
-            <div class="card topmargin" style="border-top-color: #1AE304;">
-              <div class="card-body">
-                <img src="assets/images/logo7.svg" alt="Rimboschiamo" class="mb-3" width="70">
-                <div class="d-flex align-items-baseline">
-                  <h3>Rimboschiamo</h3>
-                  <a href="/rimboschiamo">
-                    <i class="icon-line-open ml-2"></i>
-                  </a>
-                </div>
-                <p class="text-black-50">Organizzazione di volontariato per il recupero dei
-                  boschi autoctoni, la forestazione urbana e l'educazione ambientale.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 col-lg-4">
-            <div class="card topmargin" style="border-top-color: #1AE304;">
-              <div class="card-body">
-                <img src="assets/images/logo9.svg" alt="Rimboschiamo" class="mb-3" width="70">
-                <div class="d-flex align-items-baseline">
-                  <h3>Ragusa Abbogghia</h3>
-                  <a href="/ragusa-abbogghia">
-                    <i class="icon-line-open ml-2"></i>
-                  </a>
-                </div>
-                <p class="text-black-50">Ci occupiamo attivamente di diversi progetti: la
-                  realizzazione della prima Oasi canina in Italia, piantumazione di nuove aree
-                  verdi, sensibilizzazione e rieducazione sul tema randagismo. </p>
-              </div>
-            </div>
-          </div>
+          <?php } ?>
         </div>
       </div>
     </div>
@@ -269,359 +148,41 @@
         </div>
       </div>
       <div id="oc-teachers" class="owl-carousel owl-carousel-full image-carousel carousel-widget customjs">
-        <div class="oc-item">
-          <div class="jumbotron m-0 dark p-5 d-flex justify-content-center align-items-md-end flex-column" style="background: linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0, 0.8)), url('assets/images/gallery/bg1.jpg') no-repeat center center / cover;">
-            <div class="jumbotron-text mt-0 mt-md-auto row align-items-center">
-              <div class="col-md-10">
-                <div class="testimonial bg-transparent shadow-none border-0 p-0">
-                  <h2 class="mb-1">Orti Sociali - Proxima</h2>
-                  <div class="testi-meta ls1 mb-4 text-light font-weight-normal"> Cooperativa
-                    Sociale</div>
-                  <div class="testi-content">
-                    <p>Prodotti genuini, di stagione, altamente naturali e a km 0. Una
-                      concreta alternativa verso l'empowerment e l’integrazione
-                      sociale alle vittime di tratta e sfruttamento.</p>
+        <?php $esercenti = returnDBObject("SELECT * FROM datatype_esercenti WHERE attivO=? ORDER BY nome ASC", ["SI"], 1); ?>
+        <?php foreach ($esercenti as $esercente) { ?>
+          <div class="oc-item">
+            <div class="jumbotron m-0 dark p-5 d-flex justify-content-center align-items-md-end flex-column" style="background: linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0, 0.8)), url('/contents/<?php echo $esercente['banner']; ?>') no-repeat center center / cover;">
+              <div class="jumbotron-text mt-0 mt-md-auto row align-items-center">
+                <div class="col-md-10">
+                  <div class="testimonial bg-transparent shadow-none border-0 p-0">
+                    <h2 class="mb-1"><?php echo $esercente['nome']; ?></h2>
+                    <div class="testi-meta ls1 mb-4 text-light font-weight-normal"><?php echo $esercente['comune']; ?> - <?php echo $esercente['tipologia']; ?></div>
+                    <div class="testi-content">
+                      <p><?php echo $esercente['descrizione']; ?></p>
+                    </div>
                   </div>
-                </div>
-                <div class="social-icons topmargin-sm">
-                  <a href="https://www.proximarg.org/orti-sociali" target="_blank" class="social-icon si-world si-small si-light">
-                    <i class="icon-world"></i><i class="icon-world"></i>
-                  </a>
-                  <a href="https://www.facebook.com/proximacooperativa/" target="_blank" class="social-icon si-facebook si-small si-light">
-                    <i class="icon-facebook"></i><i class="icon-facebook"></i>
-                  </a>
-                  <a href="https://instagram.com/ortisociali_proxima?igshid=q6ly5ac7dx2k" target="_blank" class="social-icon si-instagram si-small si-light">
-                    <i class="icon-instagram"></i><i class="icon-instagram"></i>
-                  </a>
+                  <div class="social-icons topmargin-sm">
+                    <?php if ($esercente['website'] != "") { ?>
+                      <a href="<?php echo $esercente['website']; ?>" target="_blank" class="social-icon si-world si-small si-light">
+                        <i class="icon-world"></i><i class="icon-world"></i>
+                      </a>
+                    <?php } ?>
+                    <?php if ($esercente['facebook'] != "") { ?>
+                    <a href="<?php echo $esercente['facebook']; ?>" target="_blank" class="social-icon si-facebook si-small si-light">
+                      <i class="icon-facebook"></i><i class="icon-facebook"></i>
+                    </a>
+                    <?php } ?>
+                    <?php if ($esercente['instagram'] != "") { ?>
+                    <a href="<?php echo $esercente['instagram']; ?>" target="_blank" class="social-icon si-instagram si-small si-light">
+                      <i class="icon-instagram"></i><i class="icon-instagram"></i>
+                    </a>
+                    <?php } ?>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="oc-item">
-          <div class="jumbotron m-0 dark p-5 d-flex justify-content-center align-items-md-end flex-column" style="background: linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0, 0.8)), url('assets/images/gallery/primaclasse.jpg') no-repeat center center / cover;">
-            <div class="jumbotron-text mt-0 mt-md-auto row align-items-center">
-              <div class="col-md-10">
-                <div class="testimonial bg-transparent shadow-none border-0 p-0">
-                  <h2 class="mb-1">Prima Classe</h2>
-                  <div class="testi-meta ls1 mb-4 text-light font-weight-normal">
-                    Caffetteria</div>
-                  <div class="testi-content">
-                    <p>Un locale trasversale con l’obiettivo di scandire con creatività e
-                      gusto ogni momento della giornata..</p>
-                  </div>
-                </div>
-                <div class="social-icons topmargin-sm">
-                  <a href="https://www.primaclassebar.com/" target="_blank" class="social-icon si-world si-small si-light">
-                    <i class="icon-world"></i><i class="icon-world"></i>
-                  </a>
-                  <a href="https://www.facebook.com/pages/Prima%20Classe%20Ragusa/501696706896168/" target="_blank" class="social-icon si-facebook si-small si-light">
-                    <i class="icon-facebook"></i><i class="icon-facebook"></i>
-                  </a>
-                  <a href="https://www.instagram.com/primaclasseragusa/?hl=it" target="_blank" class="social-icon si-instagram si-small si-light">
-                    <i class="icon-instagram"></i><i class="icon-instagram"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="oc-item">
-          <div class="jumbotron m-0 dark p-5 d-flex justify-content-center align-items-md-end flex-column" style="background: linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0, 0.8)), url('assets/images/gallery/books.jpg') no-repeat center center / cover;">
-            <div class="jumbotron-text mt-0 mt-md-auto row align-items-center">
-              <div class="col-md-10">
-                <div class="testimonial bg-transparent shadow-none border-0 p-0">
-                  <h2 class="mb-1">Ubik Ibla</h2>
-                  <div class="testi-meta ls1 mb-4 text-light font-weight-normal">
-                    Libreria</div>
-                  <div class="testi-content">
-                    <p>In un palazzo storico che si intona con il profumo dei libri.Trovate
-                      il vostro prossimo libro preferito a Ibla.</p>
-                  </div>
-                </div>
-                <div class="social-icons topmargin-sm">
-                  <a href="https://iblabookshop.com/i-librai/" target="_blank" class="social-icon si-world si-small si-light">
-                    <i class="icon-world"></i><i class="icon-world"></i>
-                  </a>
-                  <a href="https://www.facebook.com/iblabookshop" target="_blank" class="social-icon si-facebook si-small si-light">
-                    <i class="icon-facebook"></i><i class="icon-facebook"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="oc-item">
-          <div class="jumbotron m-0 dark p-5 d-flex justify-content-center align-items-md-end flex-column" style="background: linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0, 0.8)), url('assets/images/gallery/usato.jpg') no-repeat center center / cover;">
-            <div class="jumbotron-text mt-0 mt-md-auto row align-items-center">
-              <div class="col-md-10">
-                <div class="testimonial bg-transparent shadow-none border-0 p-0">
-                  <h2 class="mb-1">Mercatopoli</h2>
-                  <div class="testi-meta ls1 mb-4 text-light font-weight-normal"> Negozio del
-                    riuso</div>
-                  <div class="testi-content">
-                    <p>Un negozio dell'usato innovativo in cui portare in vendita gli
-                      oggetti che non si utilizzano più.</p>
-                  </div>
-                </div>
-                <div class="social-icons topmargin-sm">
-                  <a href="https://ragusa.mercatopoli.it/" target="_blank" class="social-icon si-world si-small si-light">
-                    <i class="icon-world"></i><i class="icon-world"></i>
-                  </a>
-                  <a href="https://www.facebook.com/MercatopoliRagusa/" target="_blank" class="social-icon si-facebook si-small si-light">
-                    <i class="icon-facebook"></i><i class="icon-facebook"></i>
-                  </a>
-                  <a href="https://www.instagram.com/semicolonweb/" target="_blank" class="social-icon si-instagram si-small si-light">
-                    <i class="icon-instagram"></i><i class="icon-instagram"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="oc-item">
-          <div class="jumbotron m-0 dark p-5 d-flex justify-content-center align-items-md-end flex-column" style="background: linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0, 0.8)), url('assets/images/gallery/sherpa.jpg') no-repeat center center / cover;">
-            <div class="jumbotron-text mt-0 mt-md-auto row align-items-center">
-              <div class="col-md-10">
-                <div class="testimonial bg-transparent shadow-none border-0 p-0">
-                  <h2 class="mb-1">Sherpa delle Shumare</h2>
-                  <div class="testi-meta ls1 mb-4 text-light font-weight-normal">
-                    Escursionismo</div>
-                  <div class="testi-content">
-                    <p>La guida ti conduce alla scoperta del territorio con storie celate
-                      dentro a rocce e piante. Geologia, botanica,leggende medievali e
-                      prodotti tipici in percorsi adatti a tutti.</p>
-                  </div>
-                </div>
-                <div class="social-icons topmargin-sm">
-                  <a href="https://www.facebook.com/SherpadelleShumare/" target="_blank" class="social-icon si-facebook si-small si-light">
-                    <i class="icon-facebook"></i><i class="icon-facebook"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="oc-item">
-          <div class="jumbotron m-0 dark p-5 d-flex justify-content-center align-items-md-end flex-column" style="background: linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0, 0.8)), url('assets/images/gallery/pt5.png') no-repeat center center / cover;">
-            <div class="jumbotron-text mt-0 mt-md-auto row align-items-center">
-              <div class="col-md-10">
-                <div class="testimonial bg-transparent shadow-none border-0 p-0">
-                  <h2 class="mb-1">Delicatessen</h2>
-                  <div class="testi-meta ls1 mb-4 text-light font-weight-normal">
-                    Drogheria Gourmet</div>
-                  <div class="testi-content">
-                    <p>Un piccolo universo, un ibrido nato dalla fusione tra un’antica
-                      bottega di generi alimentari e uno spazio di ristoro sviluppato
-                      all’interno di una stanza che concettualmente rappresenta l’interno,
-                      a fiori, di una valigia anni ‘70.</p>
-                  </div>
-                </div>
-                <div class="social-icons topmargin-sm">
-                  <a href="https://delicatessenragusa.it/" target="_blank" class="social-icon si-world si-small si-light">
-                    <i class="icon-world"></i><i class="icon-world"></i>
-                  </a>
-                  <a href="https://www.facebook.com/DelicatessenRagusa" target="_blank" class="social-icon si-facebook si-small si-light">
-                    <i class="icon-facebook"></i><i class="icon-facebook"></i>
-                  </a>
-                  <a href="https://www.instagram.com/delicatessen_in_drogheria/?hl=it" target="_blank" class="social-icon si-instagram si-small si-light">
-                    <i class="icon-instagram"></i><i class="icon-instagram"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="oc-item">
-          <div class="jumbotron m-0 dark p-5 d-flex justify-content-center align-items-md-end flex-column" style="background: linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0, 0.8)), url('assets/images/gallery/pt6.png') no-repeat center center / cover;">
-            <div class="jumbotron-text mt-0 mt-md-auto row align-items-center">
-              <div class="col-md-10">
-                <div class="testimonial bg-transparent shadow-none border-0 p-0">
-                  <h2 class="mb-1">Formiche</h2>
-                  <div class="testi-meta ls1 mb-4 text-light font-weight-normal">
-                    Concept Store</div>
-                  <div class="testi-content">
-                    <p>È un concept store a 360°, uno spazio creativo in cui curiosare per
-                      trovare una selezione di specialità tipiche del territorio, vini,
-                      birre, tè, conserve, prodotti a km 0, accessori per la cucina, per
-                      la casa, per il tempo libero, oggetti di design, pezzi di
-                      artigianato unici, bomboniere e tantissime idee regalo.</p>
-                  </div>
-                </div>
-                <div class="social-icons topmargin-sm">
-                  <a href="https://www.facebook.com/LeFormicheStore/" target="_blank" class="social-icon si-facebook si-small si-light">
-                    <i class="icon-facebook"></i><i class="icon-facebook"></i>
-                  </a>
-                  <a href="https://www.instagram.com/leformichestore/?hl=it" target="_blank" class="social-icon si-instagram si-small si-light">
-                    <i class="icon-instagram"></i><i class="icon-instagram"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="oc-item">
-          <div class="jumbotron m-0 dark p-5 d-flex justify-content-center align-items-md-end flex-column" style="background: linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0, 0.8)), url('assets/images/gallery/pt7.png') no-repeat center center / cover;">
-            <div class="jumbotron-text mt-0 mt-md-auto row align-items-center">
-              <div class="col-md-10">
-                <div class="testimonial bg-transparent shadow-none border-0 p-0">
-                  <h2 class="mb-1">Trattoria nto' cumannanti</h2>
-                  <div class="testi-meta ls1 mb-4 text-light font-weight-normal">
-                    Ristorante</div>
-                  <div class="testi-content">
-                    <p>La filosofia del ristorante è quella di far trovare ogni giorno solo
-                      cibo fresco appena preparato in funzione dei prodotti freschi e di
-                      qualità comprati la mattina. </p>
-                  </div>
-                </div>
-                <div class="social-icons topmargin-sm">
-                  <a href="https://www.facebook.com/Trattoriantocumannanti/" target="_blank" class="social-icon si-facebook si-small si-light">
-                    <i class="icon-facebook"></i><i class="icon-facebook"></i>
-                  </a>
-                  <a href="https://www.instagram.com/trattoriantocumannanti/" target="_blank" class="social-icon si-instagram si-small si-light">
-                    <i class="icon-instagram"></i><i class="icon-instagram"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="oc-item">
-          <div class="jumbotron m-0 dark p-5 d-flex justify-content-center align-items-md-end flex-column" style="background: linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0, 0.8)), url('assets/images/gallery/pt8.png') no-repeat center center / cover;">
-            <div class="jumbotron-text mt-0 mt-md-auto row align-items-center">
-              <div class="col-md-10">
-                <div class="testimonial bg-transparent shadow-none border-0 p-0">
-                  <h2 class="mb-1">Hyblasus</h2>
-                  <div class="testi-meta ls1 mb-4 text-light font-weight-normal">
-                    Salumificio artigianale</div>
-                  <div class="testi-content">
-                    <p>Piccolo salumificio ragusano a conduzione familiare nato nel 2010. Le
-                      conoscenze e le tecniche di produzione sono state tramandate
-                      direttamente dai nonni e scrupolosamente abbinate alle moderne
-                      attrezzature sempre nel rispetto della tradizione e dell’ambiente.
-                    </p>
-                  </div>
-                </div>
-                <div class="social-icons topmargin-sm">
-                  <a href="https://hiblasus.it/" target="_blank" class="social-icon si-world si-small si-light">
-                    <i class="icon-world"></i><i class="icon-world"></i>
-                  </a>
-                  <a href="https://www.facebook.com/Hiblasus-i-salumi-della-tradizione-799983560138002
-											" target="_blank" class="social-icon si-facebook si-small si-light">
-                    <i class="icon-facebook"></i><i class="icon-facebook"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="oc-item">
-          <div class="jumbotron m-0 dark p-5 d-flex justify-content-center align-items-md-end flex-column" style="background: linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0, 0.8)), url('assets/images/gallery/pt9.png') no-repeat center center / cover;">
-            <div class="jumbotron-text mt-0 mt-md-auto row align-items-center">
-              <div class="col-md-10">
-                <div class="testimonial bg-transparent shadow-none border-0 p-0">
-                  <h2 class="mb-1">Verde Vigna</h2>
-                  <div class="testi-meta ls1 mb-4 text-light font-weight-normal">
-                    Società cooperativa</div>
-                  <div class="testi-content">
-                    <p>Si occupa della vendita di ortaggi e frutta prettamente naturali e
-                      bio e di tantissimi prodotti locali sempre naturali e biologici per
-                      una nutrizione ottimale.</p>
-                  </div>
-                </div>
-                <div class="social-icons topmargin-sm">
-                  <a href="https://www.facebook.com/Verde-Vigna-108908201241007" target="_blank" class="social-icon si-facebook si-small si-light">
-                    <i class="icon-facebook"></i><i class="icon-facebook"></i>
-                  </a>
-                  <a href="https://www.instagram.com/cooperativaverde/" target="_blank" class="social-icon si-instagram si-small si-light">
-                    <i class="icon-instagram"></i><i class="icon-instagram"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="oc-item">
-          <div class="jumbotron m-0 dark p-5 d-flex justify-content-center align-items-md-end flex-column" style="background: linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0, 0.8)), url('assets/images/gallery/pt10.png') no-repeat center center / cover;">
-            <div class="jumbotron-text mt-0 mt-md-auto row align-items-center">
-              <div class="col-md-10">
-                <div class="testimonial bg-transparent shadow-none border-0 p-0">
-                  <h2 class="mb-1">Sotto Sale</h2>
-                  <div class="testi-meta ls1 mb-4 text-light font-weight-normal">
-                    Ristorante</div>
-                  <div class="testi-content">
-                    <p>È il tempo assaporato, quello passato insieme, quello che fa stare
-                      bene. Piatti vivaci per tutti i palati, musica dal vivo e cocktail
-                      da sorseggiare dopo una giornata al mare.</p>
-                  </div>
-                </div>
-                <div class="social-icons topmargin-sm">
-                  <a href="http://www.sottosale-saltatempo.it/" target="_blank" class="social-icon si-world si-small si-light">
-                    <i class="icon-world"></i><i class="icon-world"></i>
-                  </a>
-                  <a href="https://www.facebook.com/sottosale.saltatempo/" target="_blank" class="social-icon si-facebook si-small si-light">
-                    <i class="icon-facebook"></i><i class="icon-facebook"></i>
-                  </a>
-                  <a href="https://www.instagram.com/sottosale_saltatempo/" target="_blank" class="social-icon si-instagram si-small si-light">
-                    <i class="icon-instagram"></i><i class="icon-instagram"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="oc-item">
-          <div class="jumbotron m-0 dark p-5 d-flex justify-content-center align-items-md-end flex-column" style="background: linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0, 0.8)), url('assets/images/gallery/pt11.png') no-repeat center center / cover;">
-            <div class="jumbotron-text mt-0 mt-md-auto row align-items-center">
-              <div class="col-md-10">
-                <div class="testimonial bg-transparent shadow-none border-0 p-0">
-                  <h2 class="mb-1">Exè Bistrot</h2>
-                  <div class="testi-meta ls1 mb-4 text-light font-weight-normal">
-                    Bistrot</div>
-                  <div class="testi-content">
-                    <p>Cerchiamo la bellezza, assaporiamo la bontà, riscopriamo i profumi,
-                      l’essenza stessa dell’artigianalità. In viaggio tra le viuzze e le
-                      putìe più nascoste,alla ricerca del volto autentico della Sicilia
-                      che è uno, nessuno, centomila.</p>
-                  </div>
-                </div>
-                <div class="social-icons topmargin-sm">
-                  <a href="https://www.exefood.com/" target="_blank" class="social-icon si-world si-small si-light">
-                    <i class="icon-world"></i><i class="icon-world"></i>
-                  </a>
-                  <a href="https://www.facebook.com/exefood" target="_blank" class="social-icon si-facebook si-small si-light">
-                    <i class="icon-facebook"></i><i class="icon-facebook"></i>
-                  </a>
-                  <a href="https://www.instagram.com/exefood__/" target="_blank" class="social-icon si-instagram si-small si-light">
-                    <i class="icon-instagram"></i><i class="icon-instagram"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="oc-item">
-          <div class="jumbotron m-0 dark p-5 d-flex justify-content-center align-items-md-end flex-column" style="background: linear-gradient(to bottom, rgba(0,0,0,0.1), rgba(0,0,0, 0.8)), url('assets/images/gallery/pharma.jpeg') no-repeat center center / cover;">
-            <div class="jumbotron-text mt-0 mt-md-auto row align-items-center">
-              <div class="col-md-10">
-                <div class="testimonial bg-transparent shadow-none border-0 p-0">
-                  <h2 class="mb-1">Parafarmacia Ibla</h2>
-                  <div class="testi-content">
-                    <p>Un nuovo canale di vendita e consulenza di prodotti per la salute,
-                      mette al servizio dei clienti di Ragusa Ibla la massima qualità e
-                      professionalità, ed offre una grande varietà di referenze dei
-                      migliori brand del settore farmaceutico.</p>
-                  </div>
-                </div>
-                <div class="social-icons topmargin-sm">
-                  <a href="https://www.facebook.com/ParafarmaciaIblaRG/?ref=page_internal" target="_blank" class="social-icon si-facebook si-small si-light">
-                    <i class="icon-facebook"></i><i class="icon-facebook"></i>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        <?php } ?>
       </div>
     </div>
     <!-- end-->
