@@ -158,7 +158,7 @@
                     <h2 class="mb-1"><?php echo $esercente['nome']; ?></h2>
                     <div class="testi-meta ls1 mb-4 text-light font-weight-normal"><?php echo $esercente['comune']; ?> - <?php echo $esercente['tipologia']; ?></div>
                     <div class="testi-content">
-                      <p><?php echo $esercente['descrizione']; ?></p>
+                      <?php echo $esercente['descrizione']; ?>
                     </div>
                   </div>
                   <div class="social-icons topmargin-sm">
