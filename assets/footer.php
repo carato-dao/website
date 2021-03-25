@@ -244,15 +244,17 @@
     var popup = {}
     <?php $esercenti = returnDBObject("SELECT * FROM datatype_esercenti WHERE attivO=? ORDER BY nome ASC", ["SI"], 1); ?>
     <?php foreach ($esercenti as $esercente) { ?>
-        popup['<?php echo toSlug($esercente['nome']); ?>'] = new mapboxgl.Popup({
-            offset: 25
-        }).setText(
-            "<?php echo $esercente['nome'] . " - " . $esercente['indirizzo']; ?>"
-        );
-        new mapboxgl.Marker()
-            .setLngLat([<?php echo $esercente['coordinate']; ?>])
-            .setPopup(popup['primaclasse'])
-            .addTo(map);
+        <?php if($esercente['coordinate'] != ""){ ?>
+            popup['<?php echo toSlug($esercente['nome']); ?>'] = new mapboxgl.Popup({
+                offset: 25
+            }).setText(
+                "<?php echo $esercente['nome'] . " - " . $esercente['indirizzo']; ?>"
+            );
+            new mapboxgl.Marker()
+                .setLngLat([<?php echo $esercente['coordinate']; ?>])
+                .setPopup(popup['primaclasse'])
+                .addTo(map);
+        <?php } ?>
     <?php } ?>
 </script>
 </body>
