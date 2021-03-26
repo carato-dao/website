@@ -121,9 +121,11 @@
                   <img src="/contents/<?php echo $associazione['logo']; ?>" alt="<?php echo $associazione['nome']; ?>" class="mb-3" width="70">
                   <div class="d-flex align-items-baseline">
                     <h3><?php echo $associazione['nome']; ?></h3>
-                    <a href="/associazione/<?php echo $associazione['slug']; ?>">
-                      <i class="icon-line-open ml-2"></i>
-                    </a>
+                    <?php if($associazione['slug'] != ""){ ?>
+                      <a href="/associazione/<?php echo $associazione['slug']; ?>">
+                        <i class="icon-line-open ml-2"></i>
+                      </a>
+                    <?php } ?>
                   </div>
                   <p class="text-black-50"><?php echo $associazione['preview']; ?></p>
                 </div>
