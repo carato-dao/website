@@ -29,8 +29,8 @@
       <div class="col-md-7 col-padding" style="border-left: 1px solid black;">
         <div>
           <div class="heading-block">
-            <span class="before-heading color">Associazione</span>
-            <h3>Collettivo Ocra</h3>
+            <span class="before-heading color"><?php echo $associazione['tipologia']; ?></span>
+            <h3><?php echo $associazione['nome']; ?></h3>
           </div>
           <div class="row col-mb-50">
 
