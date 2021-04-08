@@ -11,7 +11,7 @@
 			<?php echo $bmt_locales['dashboard']['menu']; ?>
 		</div>
 		<div class="bmt-page" style="padding:30px 0;">
-			<iframe width="100%" id="analytics" style="padding-left:250px;" height="950" src="https://datastudio.google.com/embed/reporting/1d5aac6e-37fd-492b-96e5-b09f6cd17231/page/1M" frameborder="0" style="border:0" allowfullscreen></iframe>
+			<iframe width="100%" id="analytics" style="padding-left:250px;" height="1000" src="https://datastudio.google.com/embed/reporting/1d5aac6e-37fd-492b-96e5-b09f6cd17231/page/1M" frameborder="0" style="border:0" allowfullscreen></iframe>
 		</div>
 	</div>
 	<?php include('layout/footer.php'); ?>
