@@ -242,7 +242,7 @@
         zoom: 13
     });
     var popup = {}
-    <?php $esercenti = returnDBObject("SELECT * FROM datatype_esercenti WHERE attivO=? ORDER BY nome ASC", ["SI"], 1); ?>
+    <?php $esercenti = returnDBObject("SELECT * FROM datatype_esercenti WHERE attivo=? ORDER BY nome ASC", ["SI"], 1); ?>
     <?php foreach ($esercenti as $esercente) { ?>
         <?php if($esercente['coordinate'] != ""){ ?>
             popup['<?php echo toSlug($esercente['nome']); ?>'] = new mapboxgl.Popup({
