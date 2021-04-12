@@ -44,7 +44,7 @@
     <link href='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css' rel='stylesheet' />
 
     <!-- Document Title ============================================= -->
-    <title>Carato | Moneta virtuosa</title>
+    <title><?php echo $page['title']; ?> | Carato | Moneta virtuosa</title>
 
 </head>
 
@@ -150,11 +150,11 @@
                                         <div>Associazioni</div>
                                     </a>
                                 </li>
-                                <li class="menu-item mega-menu">
-                                    <a class="menu-link" href="/#puntivendita">
+                                <!--<li class="menu-item mega-menu">
+                                    <a class="menu-link" href="/esercenti">
                                         <div>Punti Vendita</div>
                                     </a>
-                                </li>
+                                </li>-->
                                 <li class="menu-item mega-menu">
                                     <a class="menu-link" href="/eventi">
                                         <div>Eventi</div>

@@ -150,7 +150,7 @@
         </div>
       </div>
       <div id="oc-teachers" class="owl-carousel owl-carousel-full image-carousel carousel-widget customjs">
-        <?php $esercenti = returnDBObject("SELECT * FROM datatype_esercenti WHERE attivo=? ORDER BY nome ASC", ["SI"], 1); ?>
+        <?php $esercenti = returnDBObject("SELECT * FROM datatype_esercenti WHERE attivo=? ORDER BY id DESC", ["SI"], 1); ?>
         <?php 
           foreach ($esercenti as $esercente) { 
             include('components/esercente.php');
