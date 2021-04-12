@@ -12,14 +12,14 @@
             <div class="row h-100 align-items-center py-5">
               <div class="col-md-6">
                 <div class="heading-block border-bottom-0 bottommargin-sm">
-                  <h2 class="font-weight-bold nott ls0" data-animate="fadeInUp" data-delay="200" style="font-size: 46px;">Un albero è conosciuto per i
+                  <h2 class="font-weight-bold nott ls0" style="font-size: 46px;">Un albero è conosciuto per i
                     suoi frutti, un uomo per le sue azioni. Una buona azione non è mai
                     perduta.</h2>
                 </div>
-                <p class="mb-5 font-weight-normal lead" data-animate="fadeInUp" data-delay="400" style="line-height: 1.6;">Spargi il seme della buona azione e raccogli
+                <p class="mb-5 font-weight-normal lead" style="line-height: 1.6;">Spargi il seme della buona azione e raccogli
                   carati.
                 </p>
-                <a data-animate="fadeInUp" data-delay="400" href="/assets/manifesto.pdf" class="button button-small button-light button-success button-rounded m-0">Manifesto</a>
+                <a href="/assets/manifesto.pdf" class="button button-small button-light button-success button-rounded m-0">Manifesto</a>
               </div>
             </div>
           </div>
