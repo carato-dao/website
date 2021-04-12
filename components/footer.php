@@ -8,7 +8,7 @@
         <div class="footer-widgets-wrap">
             <div class="row">
                 <div class="footer-head col-lg-6 col-md-6 col-xs-12 d-flex align-items-center">
-                    <a href="#"><img src="assets/images/logo-full.svg" alt="Carato" height="80"></a>
+                    <a href="#"><img src="/assets/images/logo-full.svg" alt="Carato" height="80"></a>
                     <div class="col-lg-6 col-md-6 col-xs-12">
                         <p class="text-white-50 m-0">Carato è una filosofia di pensiero che considera la
                             cultura,
