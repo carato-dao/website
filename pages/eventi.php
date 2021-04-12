@@ -1,4 +1,4 @@
-<?php include('assets/header.php'); ?>
+<?php include('components/header.php'); ?>
 
 <!-- Page Title
 		============================================= -->
@@ -27,4 +27,4 @@
   </div>
 </section><!-- #content end -->
 
-<?php include('assets/footer.php'); ?>
+<?php include('components/footer.php'); ?>

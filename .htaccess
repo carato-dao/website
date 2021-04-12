@@ -113,6 +113,9 @@
 RewriteRule associazione/([^/]+) index.php?page=associazione&slug=$1 [L]
 		#WEBSITE#
 		
+			  	RewriteRule en/base index.php?page=base&ln=en [L]
+			  	RewriteRule it/base index.php?page=base&ln=it [L] 
+			  	RewriteRule (\W|^)base(\W|$) index.php?page=base [L]
 			  	RewriteRule it/associazione index.php?page=associazione&ln=it [L] 
 			  	RewriteRule (\W|^)associazione(\W|$) index.php?page=associazione [L]
 			  	RewriteRule it/esercente index.php?page=esercente&ln=it [L] 

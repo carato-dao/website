@@ -1,4 +1,4 @@
-<?php include('assets/header.php'); ?>
+<?php include('components/header.php'); ?>
 <?php $associazione = returnDBObject("SELECT * FROM datatype_associazioni WHERE slug=? AND attiva=?",[$_GET['slug'], "SI"]); ?>
 <!-- Page Title
 		============================================= -->
@@ -57,4 +57,4 @@
     </div>
   </div>
 </section><!-- #content end -->
-<?php include('assets/footer.php'); ?>
+<?php include('components/footer.php'); ?>

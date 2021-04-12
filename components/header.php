@@ -160,6 +160,11 @@
                                         <div>Eventi</div>
                                     </a>
                                 </li>
+                                <li class="menu-item mega-menu">
+                                    <a class="menu-link" target="_blank" href="https://app.carato.org">
+                                        <div>Wallet</div>
+                                    </a>
+                                </li>
                             </ul>
                         </nav><!-- #primary-menu end -->
                         <form class="top-search-form" action="search.html" method="get">
