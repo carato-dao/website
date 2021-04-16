@@ -128,7 +128,7 @@
                         </a>
                       <?php } ?>
                     </div>
-                    <p class="text-black-50"><?php echo $associazione['preview']; ?></p>
+                    <?php echo $associazione['preview']; ?>
                   </div>
                 </div>
               </div>
