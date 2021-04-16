@@ -119,7 +119,7 @@
               <div class="col-md-4 col-lg-4">
                 <div class="card">
                   <div class="card-body">
-                    <img src="/contents/<?php echo $associazione['logo']; ?>" alt="<?php echo $associazione['nome']; ?>" class="mb-3" width="70">
+                    <img src="/contents/<?php echo $associazione['logo']; ?>" alt="<?php echo $associazione['nome']; ?>" class="mb-3" height="70">
                     <div class="d-flex align-items-baseline">
                       <h3><?php echo $associazione['nome']; ?></h3>
                       <?php if($associazione['slug'] != ""){ ?>
