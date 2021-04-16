@@ -61,6 +61,7 @@
 
 <!-- JavaScripts
 	============================================= -->
+<script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
 <script src="/assets/js/jquery.js"></script>
 <script src="/assets/js/plugins.min.js"></script>
 
