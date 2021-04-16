@@ -37,7 +37,7 @@
                                 <div class="grid-inner">
                                     <!-- Image: Start -->
                                     <div class="portfolio-image">
-                                        <img src="/contents/<?php echo $esercente['banner']; ?>" alt="<?php echo $esercente['nome']; ?>">
+                                        <div style="width:100%; height:250px; background-image:url(/contents/<?php echo $esercente['banner']; ?>);background-position:center;background-repeat:no-repeat;"></div>
                                     </div>
                                     <!-- Image: End -->
                                     <!-- Decription: Start -->
