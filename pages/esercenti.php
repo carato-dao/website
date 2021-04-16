@@ -36,7 +36,7 @@
                                 <!-- Grid Inner: Start -->
                                 <div class="grid-inner">
                                     <!-- Image: Start -->
-                                    <span style="font-size:16px"><?php echo $esercente['categoria']; ?></span>
+                                    <h3><span style="font-size:16px"><?php echo $esercente['categoria']; ?></span></h3>
                                     <div class="portfolio-image">
                                         <div style="width:100%; height:250px; background-image:url(/contents/<?php echo $esercente['banner']; ?>);background-size:cover;background-position:center;background-repeat:no-repeat;"></div>
                                     </div>
