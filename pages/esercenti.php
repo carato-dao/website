@@ -42,7 +42,7 @@
                                     <!-- Image: End -->
                                     <!-- Decription: Start -->
                                     <div class="portfolio-desc">
-                                        <h3><?php echo $esercente['categoria']; ?> - <?php echo $esercente['nome']; ?></h3>
+                                        <h3><span style="font-size:16px"><?php echo $esercente['categoria']; ?></span><br><?php echo $esercente['nome']; ?></h3>
                                         <span><a href="#"><?php echo $esercente['comune']; ?></a>, <a href="#"><?php echo $esercente['indirizzo']; ?></a></span>
                                     </div>
                                     <!-- Description: End -->
