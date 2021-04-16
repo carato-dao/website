@@ -109,15 +109,12 @@
 		
 		#CUSTOM HTACCESS#
 		
-			  RewriteRule associazione/([^/]+) index.php?page=associazione&slug=$1 [L]
-RewriteRule esercente/([^/]+) index.php?page=esercente&slug=$1 [L]
-
+			  RewriteRule esercente/([^/]+) index.php?page=esercente&slug=$1 [L]
+RewriteRule associazione/([^/]+) index.php?page=associazione&slug=$1 [L]
 		#WEBSITE#
 		
 			  	RewriteRule it/associazione index.php?page=associazione&ln=it [L] 
 			  	RewriteRule (\W|^)associazione(\W|$) index.php?page=associazione [L]
-			  	RewriteRule it/base index.php?page=base&ln=it [L] 
-			  	RewriteRule (\W|^)base(\W|$) index.php?page=base [L]
 			  	RewriteRule it/esercente index.php?page=esercente&ln=it [L] 
 			  	RewriteRule (\W|^)esercente(\W|$) index.php?page=esercente [L]
 			  	RewriteRule it/esercenti index.php?page=esercenti&ln=it [L] 

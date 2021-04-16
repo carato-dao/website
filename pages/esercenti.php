@@ -14,6 +14,7 @@
                                     array_push($categorie, $esercente['categoria']);
                                 }
                             }
+                            asort($categorie);
                         ?>
 						<!-- Portfolio Filter
 						============================================= -->
@@ -36,14 +37,12 @@
                                 <div class="grid-inner">
                                     <!-- Image: Start -->
                                     <div class="portfolio-image">
-                                        <a href="/esercente/<?php echo $esercente['slug']; ?>">
-                                            <img src="/contents/<?php echo $esercente['banner']; ?>" alt="<?php echo $esercente['nome']; ?>">
-                                        </a>
+                                        <img src="/contents/<?php echo $esercente['banner']; ?>" alt="<?php echo $esercente['nome']; ?>">
                                     </div>
                                     <!-- Image: End -->
                                     <!-- Decription: Start -->
                                     <div class="portfolio-desc">
-                                        <h3><a href="/esercente/<?php echo $esercente['slug']; ?>"><?php echo $esercente['categoria']; ?> - <?php echo $esercente['nome']; ?></a></h3>
+                                        <h3><?php echo $esercente['categoria']; ?> - <?php echo $esercente['nome']; ?></h3>
                                         <span><a href="#"><?php echo $esercente['comune']; ?></a>, <a href="#"><?php echo $esercente['indirizzo']; ?></a></span>
                                     </div>
                                     <!-- Description: End -->

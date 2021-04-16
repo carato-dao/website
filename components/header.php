@@ -36,12 +36,13 @@
     <link rel="stylesheet" href="/assets/css/font-icons.css" type="text/css" />
     <link rel="stylesheet" href="/assets/css/animate.css" type="text/css" />
     <link rel="stylesheet" href="/assets/css/magnific-popup.css" type="text/css" />
-
     <link rel="stylesheet" href="/assets/css/custom.css" type="text/css" />
+    
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <script src='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.js'></script>
     <link href='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css' rel='stylesheet' />
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
 
     <!-- Document Title ============================================= -->
     <title><?php echo $page['title']; ?> | Carato | Moneta virtuosa</title>
@@ -49,6 +50,11 @@
 </head>
 
 <style>
+    
+    .section-yogas .card{
+        margin-bottom:30px!important;
+    }
+    
     @media screen and (min-width: 768px) {
         .mobile {
             display: none !important;
@@ -150,11 +156,11 @@
                                         <div>Associazioni</div>
                                     </a>
                                 </li>
-                                <!--<li class="menu-item mega-menu">
+                                <li class="menu-item mega-menu">
                                     <a class="menu-link" href="/esercenti">
                                         <div>Punti Vendita</div>
                                     </a>
-                                </li>-->
+                                </li>
                                 <li class="menu-item mega-menu">
                                     <a class="menu-link" href="/eventi">
                                         <div>Eventi</div>
