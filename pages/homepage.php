@@ -184,7 +184,7 @@
               <p class="mb-5 lead mb-0" style="line-height: 1.7;">Rimani aggiornato e partecipa alle
                 iniziative promosse per guadagnare carati. Il calendario ti segnala tutti gli eventi
                 organizzati dalle associazioni.</p>
-              <a href="/eventi" class="button button-small button-light button-success button-rounded m-0">Eventi</a>
+              <a href="https://www.facebook.com/caratomonetavirtuosa" target="_blank" class="button button-small button-light button-success button-rounded m-0">Seguici su Facebook</a>
             </div>
           </div>
         </div>

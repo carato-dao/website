@@ -43,6 +43,7 @@
     <script src='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.js'></script>
     <link href='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css' rel='stylesheet' />
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
     <!-- Document Title ============================================= -->
     <title><?php echo $page['title']; ?> | Carato | Moneta virtuosa</title>
@@ -161,11 +162,11 @@
                                         <div>Punti Vendita</div>
                                     </a>
                                 </li>
-                                <li class="menu-item mega-menu">
+                                <!--<li class="menu-item mega-menu">
                                     <a class="menu-link" href="/eventi">
                                         <div>Eventi</div>
                                     </a>
-                                </li>
+                                </li>-->
                                 <li class="menu-item mega-menu">
                                     <a class="menu-link" target="_blank" href="https://app.carato.org">
                                         <div>Wallet</div>
