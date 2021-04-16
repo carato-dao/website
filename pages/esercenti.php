@@ -36,13 +36,14 @@
                                 <!-- Grid Inner: Start -->
                                 <div class="grid-inner">
                                     <!-- Image: Start -->
+                                    <span style="font-size:16px"><?php echo $esercente['categoria']; ?></span>
                                     <div class="portfolio-image">
                                         <div style="width:100%; height:250px; background-image:url(/contents/<?php echo $esercente['banner']; ?>);background-size:cover;background-position:center;background-repeat:no-repeat;"></div>
                                     </div>
                                     <!-- Image: End -->
                                     <!-- Decription: Start -->
                                     <div class="portfolio-desc">
-                                        <h3><span style="font-size:16px"><?php echo $esercente['categoria']; ?></span><br><?php echo $esercente['nome']; ?></h3>
+                                        <h3><?php echo $esercente['nome']; ?></h3>
                                         <span><a href="#"><?php echo $esercente['comune']; ?></a>, <a href="#"><?php echo $esercente['indirizzo']; ?></a></span>
                                     </div>
                                     <!-- Description: End -->
