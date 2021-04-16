@@ -15,7 +15,7 @@
     <link rel="icon" href="/assets/favicon.png">
 
     <!-- LOAD JQUERY LIBRARY -->
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.js"></script>
 
     <script src='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.js'></script>
     <link href='https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css' rel='stylesheet' />
@@ -54,7 +54,7 @@
     .section-yogas .card{
         margin-bottom:30px!important;
     }
-    
+
     @media screen and (min-width: 768px) {
         .mobile {
             display: none !important;
