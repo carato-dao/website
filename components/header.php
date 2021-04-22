@@ -46,7 +46,7 @@
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
     <!-- Document Title ============================================= -->
-    <title><?php echo $page['title']; ?> | Carato | Moneta virtuosa</title>
+    <title><?php echo $page['title']; ?> | Carato | <?php echo $website_translations["carato_coin"][$language]; ?></title>
 
 </head>
 
@@ -154,12 +154,12 @@
                                 </li>
                                 <li class="menu-item">
                                     <a class="menu-link" href="/#associazioni">
-                                        <div>Associazioni</div>
+                                        <div><?php echo $website_translations["associazione_tag"][$language]; ?></div>
                                     </a>
                                 </li>
                                 <li class="menu-item mega-menu">
-                                    <a class="menu-link" href="/esercenti">
-                                        <div>Punti Vendita</div>
+                                    <a class="menu-link" href="<?php if($language == 'en'){ echo '/en/local-stores';}else{ echo '/esercenti';} ?>">
+                                        <div><?php echo $website_translations["local_store"][$language]; ?></div>
                                     </a>
                                 </li>
                                 <!--<li class="menu-item mega-menu">

@@ -10,7 +10,7 @@
         <img style="height: 100px; margin-right: 20px;" src="/contents/<?php echo $associazione['logo']; ?>">
       </div>
       <div class="m-0">
-        <span>Associazione</span>
+        <span><?php echo $website_translations["associazione_tag"][$language]; ?></span>
         <h1><?php echo $associazione['nome']; ?></h1>
       </div>
     </div>
@@ -29,22 +29,20 @@
       <div class="col-md-7 col-padding" style="border-left: 1px solid black;">
         <div>
           <div class="heading-block">
-            <span class="before-heading color">Associazione</span>
+            <span class="before-heading color"><?php echo $website_translations["associazione_tag"][$language]; ?></span>
             <h3><?php echo $associazione['nome']; ?></h3>
           </div>
           <div class="row col-mb-50">
 
             <div class="col-lg-12">
-              <p><?php echo $associazione['descrizione']; ?></p>
+              <p><?php echo $associazione['descrizione_'.$language]; ?></p>
               <?php if($associazione['facebook'] != ""){ ?>
                 <a href="<?php echo $associazione['facebook']; ?>" class="social-icon inline-block si-small si-light si-rounded si-facebook">
-                  <i class="icon-facebook"></i>
                   <i class="icon-facebook"></i>
                 </a>
               <?php } ?>
               <?php if($associazione['instagram'] != ""){ ?>
                 <a href="<?php echo $associazione['instagram']; ?>" class="social-icon inline-block si-small si-light si-rounded si-instagram">
-                  <i class="icon-instagram"></i>
                   <i class="icon-instagram"></i>
                 </a>
               <?php } ?>

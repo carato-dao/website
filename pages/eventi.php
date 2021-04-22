@@ -6,9 +6,8 @@
 
   <div class="container clearfix">
     <div class="m-0 col-md-6 col-lg-6 col-sm-10 col-xs-12">
-      <span>Partecipa agli eventi per ricevere Carati. </span>
-      <h2 style="color: honeydew !important;">Ogni buona azione ti consente di guadagnare un Carato
-        spendibile presso gli esercenti convenzionati.</h2>
+      <span><?php echo $website_translations["join_event"][$language]; ?></span>
+      <h2 style="color: honeydew !important;"><?php echo $website_translations["how_to"][$language]; ?></h2>
     </div>
   </div>
 
@@ -34,7 +33,7 @@
         </div>
       </div>
     </div>
-    <div style="text-align:center" v-if="eventi.length === 0">Nessun evento in programma...</div>
+    <div style="text-align:center" v-if="eventi.length === 0"><?php echo $website_translations["no_event"][$language]; ?></div>
   </div>
 </section><!-- #content end -->
 

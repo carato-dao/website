@@ -10,9 +10,7 @@
                 <div class="footer-head col-lg-6 col-md-6 col-xs-12 d-flex align-items-center">
                     <a href="#"><img src="/assets/images/logo-full.svg" alt="Carato" height="80"></a>
                     <div class="col-lg-6 col-md-6 col-xs-12">
-                        <p class="text-white-50 m-0">Carato è una filosofia di pensiero che considera la
-                            cultura,
-                            secondo la sua stretta etimologia, una forma di coltivazione.</p>
+                        <p class="text-white-50 m-0"><?php echo $website_translations["carato_footer"][$language]; ?></p>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-3 col-6">
@@ -20,16 +18,16 @@
                         <h3 class="ls0 h5 mb-4">Menu</h3>
                         <ul class="list-unstyled iconlist ml-0">
                             <li class="mb-2"><a href="/" class="text-white-50">Home</a></li>
-                            <li class="mb-2"><a href="#associazioni" class="text-white-50">Associazioni</a></li>
-                            <li class="mb-2"><a href="#puntivendita" class="text-white-50">Punti Vendita</a>
+                            <li class="mb-2"><a href="#associazioni" class="text-white-50"><?php echo $website_translations["associazioni_title"][$language]; ?></a></li>
+                            <li class="mb-2"><a href="#puntivendita" class="text-white-50"><?php echo $website_translations["local_store"][$language]; ?></a>
                             </li>
-                            <li class="mb-2"><a href="/eventi" class="text-white-50">Eventi</a></li>
+                            <li class="mb-2"><a href="/eventi" class="text-white-50"><?php echo $website_translations["event_title"][$language]; ?></a></li>
                         </ul>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-3 col-6">
                     <div class="widget clearfix">
-                        <h3 class="ls0 h5 mb-4">Contattaci</h3>
+                        <h3 class="ls0 h5 mb-4"><?php echo $website_translations["contact_us"][$language]; ?></h3>
                         <ul class="list-unstyled iconlist ml-0">
                             <li class="mb-2"><a href="https://www.facebook.com/caratomonetavirtuosa" class="text-white-50">Facebook</a></li>
                             <!-- <li class="mb-2"><a href="#" class="text-white-50">Instagram</a></li> -->
@@ -46,7 +44,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <p class="mb-2 text-white-50">Carato | Developed with ❤️ by <a href="https://turinglabs.org/" target="_blank">turinglabs</a> using the open-source technology of <a href="https://scrypta.foundation" target="_blank">Scrypta Foundation</a></p>
+                    <p class="mb-2 text-white-50">Carato | Developed with ❤️ by <a href="https://turinglabs.org/" target="_blank">Yomi</a> using the open-source technology of <a href="https://scrypta.foundation" target="_blank">Scrypta Foundation</a></p>
                 </div>
             </div>
         </div>
@@ -241,7 +239,7 @@
     var popup = {}
     <?php $esercenti = returnDBObject("SELECT * FROM datatype_esercenti WHERE attivo=? ORDER BY nome ASC", ["SI"], 1); ?>
     <?php foreach ($esercenti as $esercente) { ?>
-        <?php if($esercente['coordinate'] != ""){ ?>
+        <?php if ($esercente['coordinate'] != "") { ?>
             popup['<?php echo toSlug($esercente['nome']); ?>'] = new mapboxgl.Popup({
                 offset: 25
             }).setText(

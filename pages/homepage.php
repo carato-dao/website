@@ -13,14 +13,10 @@
               <div class="row h-100 align-items-center py-5">
                 <div class="col-md-6">
                   <div class="heading-block border-bottom-0 bottommargin-sm">
-                    <h2 class="font-weight-bold nott ls0" style="font-size: 46px;">Un albero è conosciuto per i
-                      suoi frutti, un uomo per le sue azioni. Una buona azione non è mai
-                      perduta.</h2>
+                    <h2 class="font-weight-bold nott ls0" style="font-size: 46px;"><?php echo strip_tags($website_translations["home_intro"][$language]); ?></h2>
                   </div>
-                  <p class="mb-5 font-weight-normal lead" style="line-height: 1.6;">Spargi il seme della buona azione e raccogli
-                    carati.
-                  </p>
-                  <div v-on:click="showVideo" class="button button-small button-light button-success button-rounded m-0">Guarda il video</div>
+                  <p class="mb-5 font-weight-normal lead" style="line-height: 1.6;"><?php echo strip_tags($website_translations["home_subtitle"][$language]); ?></p>
+                  <div v-on:click="showVideo" class="button button-small button-light button-success button-rounded m-0"><?php echo strip_tags($website_translations["cta_video"][$language]); ?></div>
                 </div>
               </div>
             </div>
@@ -42,16 +38,12 @@
             <div class="col-lg-5 py-5">
               <div class="heading-block border-bottom-0 bottommargin-sm">
                 <div class="fancy-title title-border mb-3">
-                  <h5 class="font-weight-normal color font-body">Su di noi</h5>
+                  <h5 class="font-weight-normal color font-body"><?php echo strip_tags($website_translations["about_us"][$language]); ?></h5>
                 </div>
                 <h3 class="font-weight-bold nott" style="font-size: 42px; letter-spacing: -1px;">
-                  Cos'è <span>Carato</span>?</h3>
+                  <?php echo strip_tags($website_translations["what_is"][$language]); ?><span> Carato</span>?</h3>
               </div>
-              <p class="mb-5">Carato è una filosofia di pensiero che considera la cultura, secondo la
-                sua stretta etimologia, una forma di coltivazione. Grazie alla tecnologia Blockchain
-                utilizzata e alle sue caratteristiche intrinseche di trasparenza e sicurezza la
-                cultura della sostenibilità e dell’innovazione sociale diventano azioni concrete,
-                specifiche che generano mondi e persone migliori.
+              <p class="mb-5"><?php echo strip_tags($website_translations["carato_desc"][$language]); ?>
               </p>
 
               <div class="feature-box fbox-plain bottommargin-sm">
@@ -60,8 +52,7 @@
                 </div>
                 <div class="fbox-content">
                   <h3 class="font-weight-normal nott">Carato</h3>
-                  <p>Per ogni buona azione compiuta per la tua città ottieni un Carato, la moneta
-                    digitale virtuosa.
+                  <p><?php echo strip_tags($website_translations["carato_one"][$language]); ?>
                   </p>
                 </div>
               </div>
@@ -71,9 +62,8 @@
                   <i class="icon-line-circle-check text-success"></i>
                 </div>
                 <div class="fbox-content">
-                  <h3 class="font-weight-normal nott">Comunità</h3>
-                  <p>Fai una buona azione. Partecipa,condividi,aiuta e ricevi ricompense in
-                    carati.
+                  <h3 class="font-weight-normal nott"><?php echo strip_tags($website_translations["community_title"][$language]); ?></h3>
+                  <p><?php echo strip_tags($website_translations["carato_two"][$language]); ?>
                   </p>
                 </div>
               </div>
@@ -83,10 +73,8 @@
                   <i class="icon-line-circle-check text-warning"></i>
                 </div>
                 <div class="fbox-content">
-                  <h3 class="font-weight-normal nott">Associazioni</h3>
-                  <p>Promotrici di azioni utili per la città e la comunità. Unite da una genuina
-                    condivisione di valori e dalla volontà di interazione e integrazione
-                    sociale.
+                  <h3 class="font-weight-normal nott"><?php echo strip_tags($website_translations["associazioni_title"][$language]); ?></h3>
+                  <p><?php echo $website_translations["associazioni_desc"][$language]; ?>
                   </p>
                 </div>
               </div>
@@ -96,9 +84,8 @@
                   <i class="icon-line-circle-check text-info"></i>
                 </div>
                 <div class="fbox-content">
-                  <h3 class="font-weight-normal nott">Esercenti</h3>
-                  <p>Una rete di esercenti convenzionati dove poter spendere i carati ottenuti
-                    dalle buone azioni nella tua città.</p>
+                  <h3 class="font-weight-normal nott"><?php echo strip_tags($website_translations["esercenti_title"][$language]); ?></h3>
+                  <p><?php echo strip_tags($website_translations["esercenti_desc"][$language]); ?></p>
                 </div>
               </div>
             </div>
@@ -122,13 +109,15 @@
                     <img src="/contents/<?php echo $associazione['logo']; ?>" alt="<?php echo $associazione['nome']; ?>" class="mb-3" height="70">
                     <div class="d-flex align-items-baseline">
                       <h3><?php echo $associazione['nome']; ?></h3>
-                      <?php if($associazione['slug'] != ""){ ?>
-                        <a href="/associazione/<?php echo $associazione['slug']; ?>">
+                      <?php if ($associazione['slug'] != "") { ?>
+                        <a href="<?php if ($language == 'en') {
+                                    echo '/en';
+                                  } ?>/associazione/<?php echo $associazione['slug']; ?>">
                           <i class="icon-line-open ml-2"></i>
                         </a>
                       <?php } ?>
                     </div>
-                    <?php echo $associazione['preview']; ?>
+                    <?php echo $associazione['preview_' . $language]; ?>
                   </div>
                 </div>
               </div>
@@ -144,18 +133,17 @@
         <div class="container">
           <div class="heading-block" style="max-width: 500px">
             <h3 class="font-weight-bold nott mb-4" style="font-size: 42px; letter-spacing: -1px;">
-              Punti vendita <span>Convenzionati</span></h3>
-            <p>Riscatta le tue buone azioni e spendi qui i tuoi carati. Gli esercenti offrono
-              scontistiche speciali dedicate a coloro che si impegnano a migliorare la propria città.
+              <?php echo strip_tags($website_translations["local_store"][$language]); ?><span><?php echo $website_translations["store_partner"][$language]; ?></span></h3>
+            <p><?php echo strip_tags($website_translations["where_buy"][$language]); ?>
             </p>
           </div>
         </div>
         <div id="oc-teachers" class="owl-carousel owl-carousel-full image-carousel carousel-widget customjs">
           <?php $esercenti = returnDBObject("SELECT * FROM datatype_esercenti WHERE attivo=? ORDER BY id DESC", ["SI"], 1); ?>
-          <?php 
-            foreach ($esercenti as $esercente) { 
-              include('components/esercente.php');
-            } 
+          <?php
+          foreach ($esercenti as $esercente) {
+            include('components/esercente.php');
+          }
           ?>
         </div>
       </div>
@@ -175,16 +163,14 @@
             <div class="col-md-6">
               <div class="heading-block border-bottom-0 bottommargin-sm">
                 <div class="fancy-title title-border mb-3">
-                  <h5 class="font-weight-normal color font-body text-uppercase ls1">Eventi
+                  <h5 class="font-weight-normal color font-body text-uppercase ls1"><?php echo strip_tags($website_translations["event_title"][$language]); ?>
                   </h5>
                 </div>
                 <h2 class="font-weight-bold nott" style="font-size: 42px; letter-spacing: -1px;">
-                  Partecipa ai nostri Eventi</h2>
+                  <?php echo $website_translations["cta_event"][$language]; ?></h2>
               </div>
-              <p class="mb-5 lead mb-0" style="line-height: 1.7;">Rimani aggiornato e partecipa alle
-                iniziative promosse per guadagnare carati. Il calendario ti segnala tutti gli eventi
-                organizzati dalle associazioni.</p>
-              <a href="https://www.facebook.com/caratomonetavirtuosa" target="_blank" class="button button-small button-light button-success button-rounded m-0">Seguici su Facebook</a>
+              <p class="mb-5 lead mb-0" style="line-height: 1.7;"><?php echo strip_tags($website_translations["event_booking"][$language]); ?></p>
+              <a href="https://www.facebook.com/caratomonetavirtuosa" target="_blank" class="button button-small button-light button-success button-rounded m-0"><?php echo $website_translations["follow_fb"][$language]; ?></a>
             </div>
           </div>
         </div>
@@ -251,10 +237,10 @@
       showVideoControl: false
     },
     methods: {
-      showVideo(){
+      showVideo() {
         this.showVideoControl = true
       },
-      hideVideo(){
+      hideVideo() {
         this.showVideoControl = false
       }
     }

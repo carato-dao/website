@@ -19,7 +19,7 @@
 						<!-- Portfolio Filter
 						============================================= -->
 						<ul class="grid-filter" data-container="#portfolio">
-							<li class="activeFilter"><a href="#" data-filter="*">Mostra tutti</a></li>
+							<li class="activeFilter"><a href="#" data-filter="*"><?php echo $website_translations["show_all"][$language]; ?></a></li>
                             <?php foreach($categorie as $categoria){ ?>
 							    <li><a href="#" data-filter=".pf-<?php echo $categoria; ?>"><?php echo $categoria; ?></a></li>
                             <?php } ?>
