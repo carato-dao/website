@@ -19,10 +19,14 @@
  		 	SecFilterEngine Off
  		 	SecFilterScanPOST Off
 		 </IfModule>
-		 # RewriteCond %{HTTPS} !=on
-    	 # RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R,QSA]
-';
- 		
+	';
+
+	if(isset($forceHttps) && $forceHttps == 'Y'){
+		$htaccess .="
+			RewriteCond %{HTTPS} !=on
+			RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R,QSA]
+			";
+	}
   $htaccess.="
 		#CUSTOM-DATATYPES#";
 		
