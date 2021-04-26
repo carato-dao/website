@@ -27,7 +27,8 @@
 			RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R,QSA]
 			";
 	}
-  $htaccess.="
+  	
+	$htaccess.="
 		#CUSTOM-DATATYPES#";
 		
    $tables = list_tables();
@@ -174,4 +175,3 @@
   	$check_htaccess=fwrite($fp, $htaccess);
  
   fclose($fp);
-?>
