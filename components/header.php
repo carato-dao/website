@@ -46,7 +46,7 @@
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
     <!-- Document Title ============================================= -->
-    <title><?php echo $page['title']; ?> | Carato | <?php echo $website_translations["carato_coin"][$language]; ?></title>
+    <title><?php echo $page['title']; ?> | Carato | <?php echo strip_tags($website_translations["carato_coin"][$language]); ?></title>
 
 </head>
 
