@@ -18,8 +18,8 @@
 <section id="content">
   <div class="content-wrap" id="app">
     <div v-if="eventi.length > 0" class="row">
-      <div v-for="event in eventi" class="col-4" v-bind:key="event.id">
-        <div  style="
+      <div v-for="event in eventi" class="col-lg-4 col-md-6 col-sm-12 col-xs-12" v-bind:key="event.id">
+        <div style="
               text-align: left;
               margin: 10px;
               padding: 20px;

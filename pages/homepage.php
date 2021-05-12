@@ -103,7 +103,7 @@
           <div class="row">
             <?php $associazioni = returnDBObject("SELECT * FROM datatype_associazioni WHERE attiva=? ORDER BY nome ASC", ["SI"], 1); ?>
             <?php foreach ($associazioni as $associazione) { ?>
-              <div class="col-md-4 col-lg-4">
+              <div class="col-md-6 col-lg-4 col-sm-12 col-xs-12">
                 <div class="card">
                   <div class="card-body">
                     <img src="/contents/<?php echo $associazione['logo']; ?>" alt="<?php echo $associazione['nome']; ?>" class="mb-3" height="70">
