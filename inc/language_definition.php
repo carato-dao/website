@@ -16,4 +16,5 @@
 	}else{
 		$language=$_GET['ln'];	
 	}
+	$language = 'it';
 ?>
