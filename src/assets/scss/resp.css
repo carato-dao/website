@@ -1,0 +1,14 @@
+@media screen and (max-width: 425px) {
+  .eventi-page .eventi-text h1 {
+    font-size: 3rem;
+  }
+  .eventi-page .eventi-text p {
+    font-size: 1.2rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+  .eventi-page .card-eventi {
+    width: 95%;
+  }
+}
+/*# sourceMappingURL=resp.css.map */
