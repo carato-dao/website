@@ -25,6 +25,10 @@
         display: none;
 
     }
+    
+    .bm-burger-button {
+        display: block;
+    }
 
     .menu-mobile {
         display: flex;
@@ -114,12 +118,6 @@
 
 @media screen and (max-width: 768px) {
 
-
-    .bm-burger-button {
-        display: block;
-    }
-
-
     .flickity-prev-next-button .flickity-button-icon {
         height: 20% !important;
     }
@@ -136,6 +134,42 @@
 
         display: none;
 
+    }
+
+    #whats-carato-container {
+        height: fit-content;
+    }
+
+    .whats-carato {
+        height: fit-content !important;
+        flex-direction: column-reverse !important;
+    }
+
+    .whats-carato section {
+        width: 100vw;
+        text-align: center;
+
+        p {
+            width: 100%;
+            padding-bottom: 1.5rem;
+        }
+
+        h1 {
+            padding-top: 2.5rem;
+        }
+    }
+
+    .whats-carato canvas {
+        width: 100%;
+        margin-top: 2rem;
+    }
+
+    .whats-carato {
+        padding: 0;
+    }
+
+    .legenda .legenda-icons .legenda-txt p {
+        width: 76%;
     }
 }
 
@@ -336,6 +370,23 @@
         padding: 2rem 0;
     }
 
+    // WALLET
+    .wallet-page .wallet-btns button {
+
+        margin: 0;
+
+    }
+
+    .wallet-page .wallet-content {
+        padding-top: 5rem;
+    }
+
+    .wallet-btns.container-fluid {
+        padding: 0;
+    }
+    .wallet-page .wallet-btns button:nth-child(1) {
+        margin-bottom: 2rem;
+    }
 
     //FOOTER
 

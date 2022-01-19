@@ -15,14 +15,14 @@
       </div>
 
       <button>
-        <a href="#whatscarato1"
+        <a href="#carato"
           ><p>Inizia</p>
-          <img src="../assets/img/arrow_down.svg" class="animate__animated animate__shakeY animate__slower	3s animate__infinite	infinite"
+          <img src="../assets/img/arrow_down.svg" class="animate__animated animate__shakeY animate__slower 8s animate__infinite	infinite"
         /></a>
       </button>
     </div>
 
-    <div id="whatscarato1"><WhatsCarato /></div>
+    <div id="carato"><WhatsCarato /></div>
 
     <Legenda />
     <HowTo />
