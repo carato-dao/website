@@ -2,9 +2,8 @@
   <footer>
     <div class="footer-links">
       <img src="../assets/img/carato-wallet.png" draggable="false" />
-      <a href="https://www.facebook.com/caratomonetavirtuosa" target="_blank"
-        >Facebook</a
-      >
+      <a href="https://www.facebook.com/caratomonetavirtuosa" target="_blank">Facebook</a>
+      <a href="https://www.instagram.com/carato_monetavirtuosa/" target="_blank">Instagram</a>
       <a v-clipboard:copy="toCopy" @click="onCopy">{{ link }}</a>
     </div>
 

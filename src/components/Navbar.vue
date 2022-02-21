@@ -8,7 +8,7 @@
     <div class="nav-links">
       <router-link to="/puntivendita">Punti vendita</router-link>
       <router-link to="/associazioni">Associazioni</router-link>
-      <router-link to="/eventi">Eventi</router-link>
+      <!-- <router-link to="/eventi">Eventi</router-link> -->
       <router-link to="/progetti">Progetti</router-link>
     </div>
 

@@ -65,15 +65,6 @@ export default {
         },
 
         {
-          id: "insieme in città",
-          nome: "Insieme in città",
-          foto: "insieme-in-citta-logo.jpg",
-          descrizione: `Opera per la valorizzazione del centro storico di Ragusa Superiore e la creazione di una mappa di comunità fatta di saperi condivisi ed esperienze collettive.`,
-          facebook: "",
-          instagram: "",
-        },
-
-        {
           id: "puliamo chiaramonte",
           nome: "Puliamo Chiaramonte",
           foto: "puliamo-chiaramonte-logo.png",

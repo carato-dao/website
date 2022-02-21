@@ -10,10 +10,13 @@
           una ricompensa spendibile presso esercenti convenzionati.
         </p>
 
-        <button @click="showModal = true">Guarda il video</button>
-
-                
-       
+        <button>
+          <a
+            href="https://www.youtube.com/watch?v=kMuQPJe9KTg&ab_channel=CaratoMonetaVirtuosa"
+            target="_blank"
+            >Guarda il video</a
+          >
+        </button>
       </section>
 
       <canvas class="container-fluid"></canvas>
@@ -22,14 +25,10 @@
 </template>
 
 <script>
-
-
 export default {
   name: "WhatsCarato",
 
-  components: {
-   
-  },
+  components: {},
 
   data() {
     return {};
